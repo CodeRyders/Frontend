@@ -2,7 +2,7 @@
   width: 390px;      /* Breite des Rechtecks */
   height: 70px;     /* Höhe des Rechtecks */
   background-color: #E9F2EF; /* Farbe des Rechtecks */
-  border-radius: 8px; /* Abgerundete Ecken (optional) */
+  /* border-radius: 8px; */ /* Abgerundete Ecken (optional) */
 }
 
 .rectangle_friends{
