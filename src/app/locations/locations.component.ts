@@ -7,6 +7,7 @@ import {MatTab, MatTabGroup, MatTabLink} from "@angular/material/tabs";
 import {MatIcon} from "@angular/material/icon";
 import {Router, RouterLink, RouterLinkActive} from "@angular/router";
 import {MatButton} from "@angular/material/button";
+import {LocationItemComponent} from "./location-item/location-item.component";
 
 interface Location {
   id: string;
@@ -22,7 +23,7 @@ interface Location {
 @Component({
   selector: 'app-locations',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatToolbar, MatTabGroup, MatTab, MatIcon, RouterLinkActive, RouterLink, MatTabLink, MatButton],
+  imports: [CommonModule, MatCardModule, MatToolbar, MatTabGroup, MatTab, MatIcon, RouterLinkActive, RouterLink, MatTabLink, MatButton, LocationItemComponent],
   templateUrl: './locations.component.html',
   styleUrl: './locations.component.css'
 })
@@ -41,6 +42,7 @@ export class LocationsComponent implements OnInit {
     this.http.get<Location[]>('http://localhost:8080/api/locations')
       .subscribe(data => {
         this.locations = data;
+
       });
   }
 
