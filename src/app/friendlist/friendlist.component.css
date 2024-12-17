@@ -45,3 +45,14 @@
   left: 25%;
   top: 6%;
 }
+
+img {
+  object-fit: fill;
+  width: 20%;
+  height: auto;
+  position: relative;
+  left: 80%;
+  top: -85%;
+  border-radius: 50%;
+}
+
