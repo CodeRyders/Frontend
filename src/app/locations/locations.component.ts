@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {CommonModule} from "@angular/common";
 import {MatCardModule} from "@angular/material/card";
 
@@ -21,10 +21,11 @@ interface Location {
   templateUrl: './locations.component.html',
   styleUrl: './locations.component.css'
 })
-export class LocationsComponent implements OnInit  {
+export class LocationsComponent implements OnInit {
   locations: Location[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit() {
     this.getLocations();
