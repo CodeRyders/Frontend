@@ -4,5 +4,5 @@ import { ShopComponent } from './shop/shop.component';
 
 export const routes: Routes = [
   { path: 'shop', component: ShopComponent },
-  //{ path: '', redirectTo: '/shop', pathMatch: 'full' }, // Default route
+  { path: '', redirectTo: '/', pathMatch: 'full' }, // Default route
 ];
