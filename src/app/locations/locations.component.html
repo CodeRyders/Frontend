@@ -1,10 +1,43 @@
-<div class="location-container">
-  <mat-card *ngFor="let location of locations" class="location-card">
-    <mat-card-header>
-      <mat-card-title>{{ location.name }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{ location.strasse }} {{ location.hausnummer }}, {{ location.plz }} {{ location.ort }}</p>
-    </mat-card-content>
-  </mat-card>
+<div class="top-bar">
+  <button mat-button [class.active]="activeLink === 'locations'" (click)="setActiveLink('locations')">
+    Standorte
+  </button>
+  <button mat-button [class.active]="activeLink === 'favorites'" (click)="setActiveLink('favorites')">
+    Favouriten
+  </button>
+</div>
+
+<div class="locations-container">
+  <div class="locations-section" *ngIf="activeLink === 'locations'">
+    <div class="location-list">
+      <div class="location-item" *ngFor="let location of locations">
+        <div class="location-image">
+          <img src="/assets/house.jpg" alt="Location Image">
+        </div>
+        <div class="location-details">
+          <h3 class="location-name">{{ location.name }}</h3>
+          <p class="location-address">{{ location.strasse }} {{ location.hausnummer }}, {{ location.plz }} {{ location.ort }}</p>
+        </div>
+        <button class="favorite-button" [class.favorited]="isFavorite(location)" (click)="toggleFavorite(location)">
+          <i class="material-icons">{{ isFavorite(location) ? 'star' : 'star_border' }}</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="favorites-section" *ngIf="activeLink === 'favorites'">
+    <div class="location-list">
+      <div class="location-item" *ngFor="let location of favorites">
+        <div class="location-image">
+          <img src="/assets/house.jpg" alt="Location Image">
+        </div>
+        <div class="location-details">
+          <h3 class="location-name">{{ location.name }}</h3>
+          <p class="location-address">{{ location.strasse }} {{ location.hausnummer }}, {{ location.plz }} {{ location.ort }}</p>
+        </div>
+        <button class="favorite-button" [class.favorited]="isFavorite(location)" (click)="toggleFavorite(location)">
+          <i class="material-icons">{{ isFavorite(location) ? 'star' : 'star_border' }}</i>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
