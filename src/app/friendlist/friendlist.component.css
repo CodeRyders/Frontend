@@ -47,7 +47,7 @@
 }
 
 img {
-  object-fit: cover;
+  object-fit: fill;
   width: 20%;
   height: auto;
   position: relative;
