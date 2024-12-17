@@ -3,8 +3,9 @@
   align-items: center;
   justify-content: space-between;
   background-color: #fbfdfc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
+  border-radius: 16px;
 
   .location-image {
     flex-shrink: 0;
