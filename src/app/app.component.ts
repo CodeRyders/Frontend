@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
+import {ShopComponent} from "./shop/shop.component";
+import { HttpClient } from "@angular/common/http"; //Für Daten aus Backend
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, ShopComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
