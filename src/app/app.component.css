@@ -1,11 +1,18 @@
 .rectangle {
-  width: 100%;      /* Breite des Rechtecks */
-  height: 15%;     /* Höhe des Rechtecks */
+  width: 390px;      /* Breite des Rechtecks */
+  height: 70px;     /* Höhe des Rechtecks */
   background-color: #E9F2EF; /* Farbe des Rechtecks */
   border-radius: 8px; /* Abgerundete Ecken (optional) */
 }
 
-p{
+.rectangle_friends{
+  background-color: #EBEAEA;
+  width: 390px;
+  height: 100px;
+
+}
+
+p {
   font-size: 230%;
   font-weight: bold;
   color: #0E534B;
