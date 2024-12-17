@@ -1,8 +1,19 @@
 <div id="main-container">
   <div id="green-banner" class="rectangle">
     <div class="banner-content">
-      <p>Punkteshop</p>
+      <p id="titel" >Punkteshop</p>
       <div id="number-container">120</div>
+      <div class="button-container">
+        <button mat-button [class.active]="activeLink === 'Stimme'" (click)="setActiveLink('stimmen')">
+          Stimme
+        </button>
+        <button mat-button [class.active]="activeLink === 'Essen/Trinken'" (click)="setActiveLink('essen')">
+          Essen/Trinken
+        </button>
+        <button mat-button [class.active]="activeLink === 'Themes'" (click)="setActiveLink('themes')">
+          Themes
+        </button>
+      </div>
     </div>
   </div>
 
@@ -11,8 +22,24 @@
       <mat-card>
         <mat-card-content>
           <div class="container">
-            <img src="favicon.ico" >
-            <p> Hallo </p>
+            <img src="assets/shopitems/Santa.png" alt="Santa" class="responsive-img">
+            <p> Weihnachtsmann (Stimme) <br> 250 Punkte</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-content>
+          <div class="container">
+            <img src="assets/shopitems/Elefant.png" alt="Benjamin" class="responsive-img">
+            <p> Benjamin Blümchen (Stimme) <br> 250 Punkte</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-content>
+          <div class="container">
+            <img src="assets/shopitems/Frosch.png" alt="Kermit" class="responsive-img">
+            <p> Kermit (Stimme) <br> 250 Punkte</p>
           </div>
         </mat-card-content>
       </mat-card>
