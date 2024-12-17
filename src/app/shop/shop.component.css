@@ -27,11 +27,16 @@
   position: absolute;
 }
 
+
+
 .banner-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #0E534B;
+  p {
+    font-size: ;
+  }
 }
 
 #content-area {
