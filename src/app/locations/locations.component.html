@@ -1,0 +1,10 @@
+<div class="location-container">
+  <mat-card *ngFor="let location of locations" class="location-card">
+    <mat-card-header>
+      <mat-card-title>{{ location.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ location.strasse }} {{ location.hausnummer }}, {{ location.plz }} {{ location.ort }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
