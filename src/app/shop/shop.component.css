@@ -1,0 +1,16 @@
+.rectangle {
+  width: 100%;      /* Breite des Rechtecks */
+  height: 15%;     /* Höhe des Rechtecks */
+  background-color: #E9F2EF; /* Farbe des Rechtecks */
+  border-radius: 8px; /* Abgerundete Ecken (optional) */
+}
+
+p{
+  font-size: 230%;
+  font-weight: bold;
+  color: #0E534B;
+  display: flex;
+  justify-content: left; /* Zentriert horizontal */
+  align-items: center;   /* Zentriert vertikal */
+  margin: 10px;
+}
